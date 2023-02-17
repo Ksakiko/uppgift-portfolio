@@ -1,3 +1,10 @@
 .hero {
-    background-color: black;
+    background-color: var(--bg-color-light);
+    height: 100vh;
+
+    &__inner {
+        background-color: black; // temp
+        width: 100%;
+    }
+
 }

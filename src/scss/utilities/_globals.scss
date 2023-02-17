@@ -10,10 +10,14 @@
 
     --border-radius: 0px;
 
-    --color-dark: #222;
+    --bg-color-light: #90DFB9;
+    --bg-color-dark: #02051D;
+
+    --color-dark: #000;
+    --color-dark-100: #343434;
     --color-dark-200: #444;
     --color-dark-300: #666;
-    --color-dark-500: #888;
+    --color-dark-500: #8C8C8C;
     --color-dark-600: #999;
     --color-dark-700: #b5b5b5;
     --color-dark-800: #d5d5d5;
@@ -29,8 +33,8 @@
     --color-accent-800: #009fbb;
     --color-accent-900: #009fbb;
     
-    --color-light: #efead8;
-    --color-light-200: #efead8;
+    --color-light: #fff;
+    --color-light-200: #E8E8E8;
     --color-light-300: #efead8;
     --color-light-400: #efead8;
     --color-light-500: #efead8;
@@ -39,12 +43,12 @@
     --color-light-800: #efead8;
     --color-light-900: #efead8;
 
-    --font-sans: 'Arial', sans-serif;
-    --font-serif: 'Georgia', serif;
+    --font-sans: 'Open Sans', sans-serif;
+    --font-serif: 'Playfair Display', serif;
     
     --line-height: 1.5;
     
-    --font-scale: 1.25;
+    --font-scale: 1.618;
     --font-size: 1rem;
 
     --font-size-1: var(--font-size);
@@ -53,5 +57,12 @@
     --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
     --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
     --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
+
+    --page-inner: 90rem;
+    --grid-container: [full-start] minmax(2rem, 1fr) [inner-start] minmax(0, var(--page-inner)) [inner-end] minmax(2rem, 1fr) [full-end];
+
+
+    --footer-height: 100px;
+
 
 }

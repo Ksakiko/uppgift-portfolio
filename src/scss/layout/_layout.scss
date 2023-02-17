@@ -1,0 +1,21 @@
+body {
+    background-color: var(--bg-color-light);
+    color: var(--color-dark-100);
+}
+
+.hero,
+.about,
+.contact,
+.footer {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner {
+        grid-column: inner;
+    }
+}
+
+
+.footer {
+    height: var(--footer-height);
+}
