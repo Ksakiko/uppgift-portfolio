@@ -1,0 +1,38 @@
+:root {
+  --font-sans: "Arial", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.test {
+  background-color: blue;
+  color: #fff;
+  border: 0;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+}
+.test:hover {
+  background-color: coral;
+  color: #fff;
+}
+
+.hero {
+  background-color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
