@@ -64,12 +64,41 @@ img {
   max-width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--font-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+}
+
+h1 {
+  --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
+}
+
+h2 {
+  --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
+}
+
+h3 {
+  --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
+}
+
+h4 {
+  --font-size-3: calc( var(--font-size-2) * var(--font-scale) );
+}
+
+h5 {
+  --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
+}
+
+h6 {
+  --font-size-1: var(--font-size);
 }
 
 p {
@@ -125,6 +154,10 @@ body {
 .hero__inner {
   background-color: black;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .about {
