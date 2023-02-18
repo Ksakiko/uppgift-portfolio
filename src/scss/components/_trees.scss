@@ -1,0 +1,11 @@
+@mixin default(
+    $tree-width: 1400px
+    
+) {
+    min-width: $tree-width;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: -47%;
+    opacity: 65%;
+}

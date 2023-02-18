@@ -69,12 +69,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--font-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  font-weight: 400;
 }
 
 h1 {
@@ -123,6 +129,10 @@ body {
   color: var(--color-dark-100);
 }
 
+.container {
+  overflow: hidden;
+}
+
 .hero,
 .about,
 .contact,
@@ -152,19 +162,72 @@ body {
   height: 100vh;
 }
 .hero__inner {
-  background-color: black;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 0 6.5rem;
+}
+.hero__name {
+  font-size: 109.67px;
+  z-index: 99;
+}
+.hero__job-title {
+  font-size: 41.89px;
+  z-index: 99;
+}
+
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.clouds__top-left {
+  position: absolute;
+  width: 100px;
+  left: 105px;
+  top: 19px;
+  opacity: 50%;
+}
+.clouds__top-right {
+  position: absolute;
+  width: 180px;
+  right: 150px;
+  top: 36px;
+  opacity: 35%;
+}
+.clouds__bottom-left {
+  position: absolute;
+  width: 150px;
+  left: 36px;
+  bottom: 74px;
+  opacity: 25%;
+}
+.clouds__bottom-right {
+  position: absolute;
+  width: 350px;
+  left: 502px;
+  bottom: 74px;
+  opacity: 22%;
 }
 
 .about {
   min-height: 100vh;
 }
 .contact {
-  min-height: 300px;
+  position: relative;
+  min-height: 400px;
+}
+.tree {
+  min-width: 1400px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: -47%;
+  opacity: 65%;
 }
 
 /*# sourceMappingURL=style.css.map */

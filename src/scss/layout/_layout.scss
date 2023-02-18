@@ -1,6 +1,13 @@
+
 body {
     background-color: var(--bg-color-light);
     color: var(--color-dark-100);
+
+
+}
+
+.container {
+    overflow: hidden;
 }
 
 .hero,
