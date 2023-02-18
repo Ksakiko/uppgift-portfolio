@@ -15,11 +15,73 @@
     &__name {
         font-size: 109.67px;
         z-index: 99;
+        position: relative;
+        
+        &::before {
+            content: '';
+            background-image: url(/src/images/cloud-1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 120px;
+            height: 130px;
+            top: -140px;
+            left: 80px;
+            opacity: 50%;     
+            display: block;
+        }
+
+        &::after {
+            content: '';
+            background-image: url(/src/images/cloud-1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 250px;
+            height: 350px;
+            top: -200px;
+            right: -190px;
+            opacity: 40%;     
+            display: block;
+        }
+
     }
 
     &__job-title {
         font-size: 41.89px;
         z-index: 99;
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url(/src/images/cloud-3.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 120px;
+            height: 130px;
+            top: 90px;
+            left: -40px;
+            opacity: 50%;     
+            display: block;
+        }
+
+        &::after {
+            content: '';
+            background-image: url(/src/images/cloud-2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 350px;
+            height: 450px;
+            top: 0;
+            right: -400px;
+            opacity: 40%;     
+            display: block;
+        }
+
+
+
     }
 
 }

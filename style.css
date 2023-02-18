@@ -189,10 +189,64 @@ body {
 .hero__name {
   font-size: 109.67px;
   z-index: 99;
+  position: relative;
+}
+.hero__name::before {
+  content: "";
+  background-image: url(/src/images/cloud-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 120px;
+  height: 130px;
+  top: -140px;
+  left: 80px;
+  opacity: 50%;
+  display: block;
+}
+.hero__name::after {
+  content: "";
+  background-image: url(/src/images/cloud-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  top: -200px;
+  right: -190px;
+  opacity: 40%;
+  display: block;
 }
 .hero__job-title {
   font-size: 41.89px;
   z-index: 99;
+  position: relative;
+}
+.hero__job-title::before {
+  content: "";
+  background-image: url(/src/images/cloud-3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 120px;
+  height: 130px;
+  top: 90px;
+  left: -40px;
+  opacity: 50%;
+  display: block;
+}
+.hero__job-title::after {
+  content: "";
+  background-image: url(/src/images/cloud-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 350px;
+  height: 450px;
+  top: 0;
+  right: -400px;
+  opacity: 40%;
+  display: block;
 }
 
 .clouds {
@@ -232,33 +286,57 @@ body {
 }
 
 .about {
-  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 16rem 6.5rem 0;
 }
 .about__inner {
-  max-width: 32rem;
   width: 100%;
-  padding: 16rem 0 0 6.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.about__content {
+  max-width: 26rem;
 }
 .about__title {
   font-size: 41.89px;
   margin-bottom: 2rem;
+  z-index: 99;
 }
 .about__text {
-  margin-bottom: 3rem;
+  z-index: 99;
 }
 .about__developer-image {
   width: 210px;
   height: 210px;
   overflow: hidden;
 }
+.about::after {
+  content: "";
+  background-image: url(/src/images/cloud-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  display: block;
+  opacity: 35%;
+}
 
 .contact {
   position: relative;
+  padding: var(--section-gap-inner) 6.5rem var(--section-gap);
 }
 .contact__inner {
-  max-width: 32rem;
   width: 100%;
-  padding: var(--section-gap-inner) 0 var(--section-gap) 6.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .contact__title {
   font-size: 41.89px;
@@ -267,14 +345,60 @@ body {
 .contact__text {
   font-size: var(--font-size-2);
 }
+.contact__button {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.contact::after {
+  content: "";
+  background-image: url(/src/images/cloud-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: -40%;
+  left: 35%;
+  display: block;
+  opacity: 35%;
+}
+
+.theme-toggle-button {
+  width: 66.45px;
+  height: 66.45px;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--color-dark);
+}
+.theme-toggle-button--clicked {
+  animation: clockwise 0.3s linear 1;
+}
+.theme-toggle-button::after {
+  content: "";
+  width: 15.69px;
+  height: 15.69px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 10;
+  position: absolute;
+  display: block;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .tree {
   min-width: 1400px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  right: -47%;
+  right: -50%;
   opacity: 65%;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,29 +1,51 @@
 .about {
 
-    min-height: 100vh; // temp
+    width: 100%;
+    position: relative;
+    padding: 16rem 6.5rem 0;
 
     &__inner {
-        max-width: 32rem;
         width: 100%;
-        padding: 16rem 0 0 6.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3rem;
+    }
 
+    &__content {
+        max-width: 26rem;
     }
 
     &__title {
         font-size: 41.89px;
         margin-bottom: 2rem;
+        z-index: 99;
     }
 
     &__text {
-        margin-bottom: 3rem;
+        z-index: 99;
     }
 
     &__developer-image {
         width: 210px;
         height: 210px;
         overflow: hidden;
+    }
 
-
+    &::after {
+        content: '';
+        background-image: url(/src/images/cloud-1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        bottom: 10%;
+        right: 15%;
+        display: block;
+        opacity: 35%;
+        
     }
 
 

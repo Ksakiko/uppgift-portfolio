@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <script src="toggle-button.js" defer></script>
 </head>
 <body>
 
@@ -26,12 +27,12 @@
 
         </div>
 
-        <figure class="clouds">
+        <!-- <figure class="clouds">
             <img class="clouds__top-left" src="src/images/cloud-1.png" alt="">
             <img class="clouds__top-right" src="src/images/cloud-1.png" alt="">
             <img class="clouds__bottom-left" src="src/images/cloud-3.png" alt="">
             <img class="clouds__bottom-right" src="src/images/cloud-2.png" alt="">
-        </figure>
+        </figure> -->
 
     </section>
 
@@ -40,8 +41,10 @@
 
         <div class="about__inner">
 
-            <h2 class="about__title">Hej! Jag heter Sakiko.</h2>
-            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis eros erat, eget sollicitudin orci maximus et. Donec hendrerit dui ut euismod aliquet. Donec id posuere velit. Pellentesque id nulla accumsan, maximus dui quis, consectetur augue.</p>
+            <div class="about__content">
+                <h2 class="about__title">Hej! Jag heter Sakiko.</h2>
+                <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis eros erat, eget sollicitudin orci maximus et. Donec hendrerit dui ut euismod aliquet. Donec id posuere velit. Pellentesque id nulla accumsan, maximus dui quis, consectetur augue.</p>
+            </div>
 
             <figure class="about__developer-image">
                 <img src="src/images/photo-sakiko@2x.png" alt="">
@@ -56,8 +59,14 @@
 
         <div class="contact__inner">
 
-            <h2 class="contact__title">Kontakt</h2>
-            <p class="contact__text">epost: sakikokawahar@gmail.com</p>
+            <div class="contact__content">
+                <h2 class="contact__title">Kontakt</h2>
+                <p class="contact__text">epost: sakikokawahar@gmail.com</p>
+            </div>
+
+            <div class="contact__button">
+                <button class="theme-toggle-button"></button>
+            </div>
             
         </div>
 
@@ -68,7 +77,6 @@
     
     <!-- Footer -->
     <footer class="site-footer">
-        
         
         <div class="site-footer__inner">
 

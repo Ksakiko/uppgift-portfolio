@@ -1,0 +1,39 @@
+@mixin default(
+    $background-color: var(--color-dark)
+) {
+    width: 66.45px;
+    height: 66.45px;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    background-color: $background-color;
+
+    &--clicked {
+        animation: clockwise 0.3s linear 1;
+        //, flip 0.2s 0.3s linear 1
+    }
+
+    // &--to-dark {
+    //     background-color: var(--color-dark);
+    // }
+
+    // &--to-light {
+    //     background-color: #90DFB9;
+    // }
+
+
+    &::after {
+        content: '';
+        width: 15.69px;
+        height: 15.69px;
+        border-radius: 50%;
+        background-color: #fff;
+        z-index: 10;
+        position: absolute;
+        display: block;
+        top: 7px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
