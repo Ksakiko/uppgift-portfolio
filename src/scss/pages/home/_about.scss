@@ -3,8 +3,26 @@
     min-height: 100vh; // temp
 
     &__inner {
+        max-width: 32rem;
+        width: 100%;
+        padding: 16rem 0 0 6.5rem;
 
-        
+    }
+
+    &__title {
+        font-size: 41.89px;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        margin-bottom: 3rem;
+    }
+
+    &__developer-image {
+        width: 210px;
+        height: 210px;
+        overflow: hidden;
+
 
     }
 
