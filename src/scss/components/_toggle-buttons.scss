@@ -1,5 +1,5 @@
-@mixin default(
-    $background-color: var(--color-dark)
+@mixin toggle-button(
+    $background-color: var(--bg-color-dark)
 ) {
     width: 66.45px;
     height: 66.45px;
@@ -36,4 +36,27 @@
         transform: translateX(-50%);
 
     }
+
+    
+    @keyframes clockwise {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes flip {
+        from {
+            transform: rotateY(0);
+        }
+
+        to {
+            transform: rotateY(180deg);
+        }
+    }
+
+
 }

@@ -1,5 +1,20 @@
 @use '../../components/trees' as tree;
-@use '../../components/toggle-buttons' as toggle-button;
+@use '../../components/toggle-buttons';
+
+body.dark {
+
+    .contact {
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .theme-toggle-button {
+        @include toggle-buttons.toggle-button(var(--bg-color-light));
+    }
+
+}
 
 .contact {
 
@@ -49,7 +64,7 @@
 }
 
 .theme-toggle-button {
-    @include toggle-button.default;
+    @include toggle-buttons.toggle-button;
 }
 
 .tree {
