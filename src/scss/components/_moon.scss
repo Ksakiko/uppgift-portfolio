@@ -1,0 +1,31 @@
+@mixin half-moon (
+    $moon-width: 200px,
+    $moon-height: 200px
+) {
+    width: $moon-width;
+    height: $moon-height;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 90px;
+    right: 200px;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+@mixin full-moon (
+    $moon-width: 500px,
+    $moon-height: 500px
+) {
+    width: $moon-width;
+    height: $moon-height;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 20px;
+    right: 200px;
+    object-fit: contain;
+    opacity: 0.7;
+}

@@ -1,3 +1,4 @@
+@use '../components/moon';
 
 body {
     background-color: var(--bg-color-light);
@@ -6,14 +7,26 @@ body {
     &.dark {
         background-color: var(--bg-color-dark);
         color: var(--color-light-100);
+
+        .half-moon {
+            @include moon.half-moon();
+        }
+
+        .full-moon {
+            @include moon.full-moon();
+        } 
+
     } 
 
 }
 
-
-
 .container {
     overflow: hidden;
+
+    .half-moon {
+        display: none;
+    } 
+
 }
 
 .hero,
