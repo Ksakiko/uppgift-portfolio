@@ -139,8 +139,8 @@ body.dark {
   color: var(--color-light-100);
 }
 body.dark .half-moon {
-  width: 200px;
-  height: 200px;
+  width: 195px;
+  height: 195px;
   display: block;
   margin: 0;
   padding: 0;
@@ -151,16 +151,16 @@ body.dark .half-moon {
   opacity: 0.8;
 }
 body.dark .full-moon {
-  width: 500px;
-  height: 500px;
+  width: 549px;
+  height: 549px;
   display: block;
   margin: 0;
   padding: 0;
   position: fixed;
   top: 20px;
-  right: 200px;
+  right: 100px;
   object-fit: contain;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .container {
@@ -188,10 +188,40 @@ body.dark .full-moon {
   height: var(--footer-height);
 }
 
+body.dark .site-footer::before {
+  content: "";
+  background-image: url(/src/images/tree-white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1400px;
+  height: 1258px;
+  display: block;
+  position: absolute;
+  bottom: var(--footer-height);
+  right: -50%;
+  opacity: 0.65;
+  z-index: 1;
+}
+
 .site-footer {
-  height: 100px;
+  height: var(--footer-height);
   width: 100%;
   background-color: var(--color-dark);
+  position: relative;
+}
+.site-footer::before {
+  content: "";
+  background-image: url(/src/images/tree-green.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1400px;
+  height: 1258px;
+  display: block;
+  position: absolute;
+  bottom: var(--footer-height);
+  right: -50%;
+  opacity: 0.65;
+  z-index: 1;
 }
 .site-footer__inner {
   width: 100%;
@@ -357,8 +387,8 @@ body.dark .about::after {
   z-index: 99;
 }
 .about__developer-image {
-  width: 210px;
-  height: 210px;
+  width: 195px;
+  height: 195px;
   overflow: hidden;
 }
 .about::after {
@@ -496,16 +526,6 @@ body.dark .theme-toggle-button::after {
   to {
     transform: rotateY(180deg);
   }
-}
-
-.tree {
-  min-width: 1400px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  right: -50%;
-  opacity: 65%;
-  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

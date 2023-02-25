@@ -1,23 +1,27 @@
-@use '../../components/trees' as tree;
+@use '../../components/trees';
 @use '../../components/toggle-buttons';
 
 body.dark {
 
     .contact {
 
+        
         &::after {
             display: none;
         }
+        
+        
     }
-
+    
     .theme-toggle-button {
         @include toggle-buttons.toggle-button(var(--bg-color-light));
     }
-
+    
+    
 }
 
 .contact {
-
+    
     position: relative;
     padding: var(--section-gap-inner) 6.5rem var(--section-gap);
     
@@ -67,6 +71,6 @@ body.dark {
     @include toggle-buttons.toggle-button;
 }
 
-.tree {
-    @include tree.default;
-}
+// .tree {
+//     @include trees.default;
+// }

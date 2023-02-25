@@ -1,8 +1,20 @@
+@use '../components/trees'; 
+
+body.dark {
+
+    .site-footer {
+        @include trees.white-tree;
+    }
+
+}
+
 .site-footer {
 
-    height: 100px;
+    height: var(--footer-height);
     width: 100%;
     background-color: var(--color-dark);
+    position: relative;
+    @include trees.green-tree;
 
     &__inner {
         width: 100%;
