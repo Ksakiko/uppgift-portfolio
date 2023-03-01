@@ -3,7 +3,7 @@
 body {
     background-color: var(--bg-color-light);
     color: var(--color-dark-100);
-
+    
     &.dark {
         background-color: var(--bg-color-dark);
         color: var(--color-light-100);
@@ -23,7 +23,8 @@ body {
 .container {
     overflow: hidden;
 
-    .half-moon {
+    .half-moon,
+    .full-moon {
         display: none;
     } 
 

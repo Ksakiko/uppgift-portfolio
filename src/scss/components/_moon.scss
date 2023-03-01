@@ -8,10 +8,16 @@
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 90px;
+    // position: absolute;
+    top: 80px;
     right: 200px;
     object-fit: contain;
     opacity: 0.8;
+    animation: half-moon-animation 0.6s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -0.5s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
 @mixin full-moon (
@@ -23,9 +29,48 @@
     display: block;
     margin: 0;
     padding: 0;
-    position: fixed;
-    top: 20px;
-    right: 100px;
+    // position: fixed;
+    position: absolute;
+    top: 800px;
+    right: 160px;
     object-fit: contain;
-    opacity: 0.5;
+    opacity: 0;
+    animation: full-moon-animation 0.7s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes half-moon-animation {
+    0% {
+        opacity: 0.8;
+    }
+
+    60% {
+        opacity: 0.8;
+    }
+    
+    100% {
+        width: 549px;
+        height: 549px;
+        opacity: 0;
+        top: -400px;
+        right: 200px;
+        position: absolute;
+    }
+}
+
+@keyframes full-moon-animation {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
 }
