@@ -1,3 +1,5 @@
+@use '../../utilities/responsive';
+
 body.dark {
 
     .about {
@@ -12,6 +14,7 @@ body.dark {
     width: 100%;
     position: relative;
     padding: 16rem 6.5rem 0;
+
 
     &__inner {
         width: 100%;
@@ -40,6 +43,7 @@ body.dark {
         width: 195px;
         height: 195px;
         overflow: hidden;
+        z-index: 99;
     }
 
     &::after {
@@ -54,7 +58,10 @@ body.dark {
         right: 15%;
         display: block;
         opacity: 35%;
-        
+
+        @include responsive.max(82rem) {
+            display: none;
+        }
     }
 
 

@@ -1,3 +1,5 @@
+@use '../utilities/responsive';
+
 @mixin green-tree(
     $tree-width: 1400px,
     $tree-height: 1258px 
@@ -14,9 +16,16 @@
         position: absolute;
         bottom: var(--footer-height);
         right: -50%;
-        // transform: translateX(-50%);
         opacity: 0.65;
-        z-index: 1;
+        z-index: 9;
+
+        
+        @include responsive.max(82rem) {
+            right: 50%;
+            transform: translateX(50%);
+            opacity: 0.15;
+        }
+
     }
 }
 
@@ -36,8 +45,13 @@
         position: absolute;
         bottom: var(--footer-height);
         right: -50%;
-        // transform: translateX(-50%);
         opacity: 0.8;
-        z-index: 1;
+        z-index: 9;
+
+        @include responsive.max(82rem) {
+            right: 50%;
+            transform: translateX(50%);
+            opacity: 0.2;
+        }
     }
 }
