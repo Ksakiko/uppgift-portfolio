@@ -1,8 +1,13 @@
 @use '../components/moon';
+@use '../utilities/responsive';
 
 body {
     background-color: var(--bg-color-light);
-    color: var(--color-dark-100);
+    color: var(--color-dark-200);
+
+    @include responsive.max(82rem) {
+        color: var(--color-dark-100);
+    }
     
     &.dark {
         background-color: var(--bg-color-dark);
@@ -39,6 +44,7 @@ body {
 
     &__inner {
         grid-column: inner;
+        
     }
 }
 

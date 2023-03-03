@@ -13,16 +13,20 @@ body.dark {
 
     width: 100%;
     position: relative;
-    padding: 16rem 6.5rem 0;
-
-
+    
+    
     &__inner {
+        padding: 16rem var(--section-gap-inner) 0;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 3rem;
+        
+        @include responsive.max(32rem) {
+            padding: 16rem 0 0;
+        }
     }
 
     &__content {
@@ -30,13 +34,19 @@ body.dark {
     }
 
     &__title {
-        font-size: 41.89px;
+        font-size: var(--font-size-3);
         margin-bottom: 2rem;
         z-index: 99;
+        position: relative;
+
+        @include responsive.max(40rem) {
+            font-size: var(--font-size-2);
+        }
     }
 
     &__text {
         z-index: 99;
+        position: relative;
     }
 
     &__developer-image {
@@ -44,6 +54,7 @@ body.dark {
         height: 195px;
         overflow: hidden;
         z-index: 99;
+        position: relative;
     }
 
     &::after {

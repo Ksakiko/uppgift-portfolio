@@ -1,18 +1,15 @@
 const moonScroll = () => {
 
-    const halfMoon = document.querySelector('.half-moon')
-    const fullMoon = document.querySelector('.full-moon')
+    const body = document.querySelector('body');
 
     const addAnimation = () => {
 
-        if (window.scrollY < 800) {
-            document.body.style.setProperty(
+        if (body.classList.contains('dark') && window.scrollY < 1000) {
+            body.style.setProperty(
                 "--scroll",
-                window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+                window.pageYOffset / (body.offsetHeight - window.innerHeight)
             )
         }
-
-        console.log(window.scrollY)
     }
 
     window.addEventListener('scroll', addAnimation, false)

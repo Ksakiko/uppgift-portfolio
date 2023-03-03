@@ -1,7 +1,13 @@
+@use '../utilities/responsive';
+
 :root {
 
     --section-gap: 8rem;
     --section-gap-inner: calc( var(--section-gap) * 0.75 );
+    
+    @include responsive.max(50rem) {
+        --section-gap-inner: 3rem; 
+    }
 
     --gap-xl: 4rem;
     --gap-l: 3rem;
@@ -13,10 +19,11 @@
     --bg-color-light: #90DFB9;
     --bg-color-dark: #02051D;
 
-    --color-dark: #000;
-    --color-dark-100: #343434;
-    --color-dark-200: #444;
-    --color-dark-300: #666;
+    --color-dark: #000000;
+    --color-dark-100: #2a2a2a;
+    --color-dark-200: #343434;
+    --color-dark-300: #444;
+    --color-dark-400: #666;
     --color-dark-500: #8C8C8C;
     --color-dark-600: #999;
     --color-dark-700: #b5b5b5;

@@ -39,17 +39,24 @@ body.dark {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding: 0 6.5rem;
+        padding: 0 var(--section-gap-inner);
 
+        @include responsive.max(32rem) {
+            padding: 0;
+        }
     }
     
     &__name {
-        font-size: 6.85rem;
-        z-index: 99;
+        font-size: var(--font-size-5);
         position: relative;
+        z-index: 99;
         
         @include responsive.max(70rem) {
-            font-size: 4.23rem;
+            font-size: var(--font-size-4);
+        }
+
+        @include responsive.max(40rem) {
+            font-size: var(--font-size-3);
         }
 
         &::before {
@@ -62,8 +69,9 @@ body.dark {
             height: 130px;
             top: -140px;
             left: 80px;
-            opacity: 50%;     
+            opacity: 0.5;     
             display: block;
+            z-index: -1;
         }
 
         &::after {
@@ -76,7 +84,8 @@ body.dark {
             height: 350px;
             top: -200px;
             right: -190px;
-            opacity: 40%;     
+            opacity: 0.4;
+            z-index: -1;
             display: block;
         }
 
@@ -84,12 +93,16 @@ body.dark {
     }
 
     &__job-title {
-        font-size: 2.62rem;
+        font-size: var(--font-size-3);
         z-index: 99;
         position: relative;
 
         @include responsive.max(70rem) {
-            font-size: 1.62rem;
+            font-size: var(--font-size-2);
+        }
+
+        @include responsive.max(40rem) {
+            font-size: var(--font-size-1);
         }
 
         &::before {
@@ -102,8 +115,9 @@ body.dark {
             height: 130px;
             top: 90px;
             left: -40px;
-            opacity: 50%;     
+            opacity: 0.5;     
             display: block;
+            z-index: -1;
         }
 
         &::after {
@@ -116,8 +130,9 @@ body.dark {
             height: 450px;
             top: 0;
             right: -400px;
-            opacity: 40%;     
+            opacity: 0.4;     
             display: block;
+            z-index: -1;
         }
 
 

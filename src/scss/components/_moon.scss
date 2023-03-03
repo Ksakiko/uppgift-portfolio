@@ -1,3 +1,5 @@
+@use '../utilities/responsive';
+
 @mixin half-moon (
     $moon-width: 195px,
     $moon-height: 195px
@@ -8,7 +10,6 @@
     margin: 0;
     padding: 0;
     position: fixed;
-    // position: absolute;
     top: 80px;
     right: 200px;
     object-fit: contain;
@@ -18,6 +19,17 @@
     animation-delay: calc(var(--scroll) * -0.5s);
     animation-iteration-count: 1;
     animation-fill-mode: both;
+
+    @include keyframes-half-moon();
+
+    @include responsive.max(62rem) {
+        position: absolute;
+        top: 80px;
+        right: 5%;
+        opacity: 0.6;
+        animation: none;
+    }
+
 }
 
 @mixin full-moon (
@@ -29,10 +41,9 @@
     display: block;
     margin: 0;
     padding: 0;
-    // position: fixed;
     position: absolute;
-    top: 800px;
-    right: 160px;
+    top: 120%;
+    right: 15%;
     object-fit: contain;
     opacity: 0;
     animation: full-moon-animation 0.7s linear infinite;
@@ -40,37 +51,68 @@
     animation-delay: calc(var(--scroll) * -1s);
     animation-iteration-count: 1;
     animation-fill-mode: both;
+
+    @include keyframes-full-moon();
+
+    @include responsive.max(82rem) {
+        @include keyframes-full-moon($opacity-end: 0.25);
+    }
+
+    @include responsive.max(62rem) {
+        top: 120%;
+        right: 3%;
+    }
 }
 
-@keyframes half-moon-animation {
-    0% {
-        opacity: 0.8;
-    }
 
-    60% {
-        opacity: 0.8;
-    }
+
+
+
+// keyframes mixin for "half-moon" mixin
+@mixin keyframes-half-moon (
+    $opacity-start: 0.8,
+    $opacity-end: 0
+) {
+
+    @keyframes half-moon-animation {
+        0% {
+            opacity: $opacity-start;
     
-    100% {
-        width: 549px;
-        height: 549px;
-        opacity: 0;
-        top: -400px;
-        right: 200px;
-        position: absolute;
+        }
+    
+        60% {
+            opacity: $opacity-start;
+        }
+        
+        100% {
+            width: 549px;
+            height: 549px;
+            opacity: $opacity-end;
+            top: -400px;
+            right: 200px;
+            position: absolute;
+        }
     }
 }
 
-@keyframes full-moon-animation {
-    0% {
-        opacity: 0;
+// keyframes mixin for "full-moon" mixin
+@mixin keyframes-full-moon (
+    $opacity-start: 0,
+    $opacity-end: 0.8
+) {
+
+    @keyframes full-moon-animation {
+        0% {
+            opacity: $opacity-start;
+        }
+    
+        80% {
+            opacity: $opacity-start;
+        }
+    
+        100% {
+            opacity: $opacity-end;
+        }
     }
 
-    70% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0.8;
-    }
 }
