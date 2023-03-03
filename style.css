@@ -371,6 +371,7 @@ body.dark .hero__job-title::after {
   font-size: var(--font-size-5);
   position: relative;
   z-index: 99;
+  margin-bottom: var(--gap-s);
 }
 @media screen and (max-width: 70rem) {
   .hero__name {
@@ -380,6 +381,7 @@ body.dark .hero__job-title::after {
 @media screen and (max-width: 40rem) {
   .hero__name {
     font-size: var(--font-size-3);
+    margin-bottom: 0.5rem;
   }
 }
 .hero__name::before {
