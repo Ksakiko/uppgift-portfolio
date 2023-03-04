@@ -1,4 +1,5 @@
 @use '../../utilities/responsive';
+@use '../../components/clouds';
 
 body.dark {
 
@@ -62,33 +63,41 @@ body.dark {
         }
 
         &::before {
-            content: '';
-            background-image: url(/src/images/cloud-1.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-            width: 120px;
-            height: 130px;
-            top: -140px;
-            left: 80px;
-            opacity: 0.5;     
-            display: block;
-            z-index: -1;
+            @include clouds.cloud-1();
+            top: -100%;
+            left: 15%;
+
+            @include responsive.max(70rem) {
+                top: -200%;
+            }
+
+            @include responsive.max(40rem) {
+                top: -500%;
+                width: 300px;
+                height: 320px;
+                opacity: 0.3;
+            }
+
         }
 
         &::after {
-            content: '';
-            background-image: url(/src/images/cloud-1.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-            width: 250px;
-            height: 350px;
-            top: -200px;
-            right: -190px;
-            opacity: 0.4;
-            z-index: -1;
-            display: block;
+
+            @include clouds.cloud-1(
+                $width: 250px,
+                $height: 350px,
+                $opacity: 0.4);
+                top: -150%;
+                right: -20%;
+
+                @include responsive.max(70rem) {
+                    top: -250%;
+                    right: -50%;
+                }
+
+                @include responsive.max(40rem) {
+                    display: none;
+                }
+
         }
 
 
@@ -108,79 +117,29 @@ body.dark {
         }
 
         &::before {
-            content: '';
-            background-image: url(/src/images/cloud-3.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-            width: 120px;
-            height: 130px;
-            top: 90px;
-            left: -40px;
-            opacity: 0.5;     
-            display: block;
-            z-index: -1;
+            @include clouds.cloud-3();
+            top: 100%;
+            left: -30%;
+
+            @include responsive.max(40rem) {
+                display: none;
+            }
         }
 
         &::after {
-            content: '';
-            background-image: url(/src/images/cloud-2.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-            width: 350px;
-            height: 450px;
+            @include clouds.cloud-2();
             top: 0;
-            right: -400px;
-            opacity: 0.4;     
-            display: block;
-            z-index: -1;
+            right: -170%;
+
+            @include responsive.max(70rem) {
+                right: -240%;
+            }
+
+            @include responsive.max(40rem) {
+                opacity: 0.3;
+            }
+
         }
-
-
-
-    }
-
-}
-
-.clouds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    &__top-left {
-        position: absolute;
-        width: 100px;
-        left: 105px;
-        top: 19px;
-        opacity: 50%;
-        
-    }
-
-    &__top-right {
-        position: absolute;
-        width: 180px;
-        right: 150px;
-        top: 36px;
-        opacity: 35%;
-    }
-
-    &__bottom-left {
-        position: absolute;
-        width: 150px;
-        left: 36px;
-        bottom: 74px;
-        opacity: 25%;
-    }
-
-    &__bottom-right {
-        position: absolute;
-        width: 350px;
-        left: 502px;
-        bottom: 74px;
-        opacity: 22%;
     }
 
 }

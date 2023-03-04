@@ -1,0 +1,50 @@
+@mixin cloud-1(
+    $width: 120px,
+    $height: 130px,
+    $opacity: 0.5
+) {
+    content: '';
+    background-image: url(/src/images/cloud-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: $width;
+    height: $height;
+    opacity: $opacity;     
+    display: block;
+    z-index: -1;
+}
+
+@mixin cloud-2 (
+    $width: 350px,
+    $height: 450px,
+    $opacity: 0.4
+) {
+    content: '';
+    background-image: url(/src/images/cloud-2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: $width;
+    height: $height;
+    opacity: $opacity;  
+    display: block;
+    z-index: -1;
+}
+
+@mixin cloud-3(
+    $width: 120px,
+    $height: 130px,
+    $opacity: 0.5
+) {
+    content: '';
+    background-image: url(/src/images/cloud-3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: $width;
+    height: $height;
+    opacity: $opacity;     
+    display: block;
+    z-index: -1;
+}

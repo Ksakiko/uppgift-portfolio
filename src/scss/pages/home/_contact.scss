@@ -1,6 +1,7 @@
 @use '../../components/trees';
 @use '../../components/toggle-buttons';
 @use '../../utilities/responsive';
+@use '../../components/clouds';
 
 body.dark {
 
@@ -11,13 +12,11 @@ body.dark {
             display: none;
         }
         
-        
     }
     
     .theme-toggle-button {
         @include toggle-buttons.toggle-button(var(--bg-color-light));
     }
-    
     
 }
 
@@ -70,17 +69,12 @@ body.dark {
     }
 
     &::after {
-        content: '';
-        background-image: url(/src/images/cloud-2.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 350px;
-        height: 350px;
-        position: absolute;
+        @include clouds.cloud-2(
+            $height: 350px,
+            $opacity: 0.3
+        );
         top: -40%;
         left: 35%;
-        display: block;
-        opacity: 35%;
         
         @include responsive.max(82rem) {
             display: none;
@@ -92,7 +86,3 @@ body.dark {
 .theme-toggle-button {
     @include toggle-buttons.toggle-button;
 }
-
-// .tree {
-//     @include trees.default;
-// }
