@@ -6,7 +6,7 @@
     --section-gap-inner: calc( var(--section-gap) * 0.75 );
     
     @include responsive.max(50rem) {
-        --section-gap-inner: 3rem; 
+        --section-gap: 6rem; 
     }
 
     --gap-xl: 4rem;
