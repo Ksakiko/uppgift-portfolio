@@ -9,6 +9,12 @@
     }
 }
 
+@mixin minW-and-minH ($breakpointW: 480px, $breakpointH: 480px) {
+    @media screen and ( min-width: $breakpointW) and ( min-height: $breakpointH ) {
+        @content;
+    }
+}
+
 @mixin min($breakpoint: 480px) {
     @media screen and ( min-width: $breakpoint) {
         @content;
