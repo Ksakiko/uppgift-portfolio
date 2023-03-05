@@ -7,6 +7,7 @@ body.dark {
 
         &__name {
     
+            // Remove cloud image for dark mode
             &::before {
                 display: none;
             }
@@ -18,6 +19,7 @@ body.dark {
 
         &__job-title {
     
+            // Remove cloud image for dark mode
             &::before {
                 display: none;
             }
@@ -62,6 +64,7 @@ body.dark {
             margin-bottom: 0.5rem;
         }
 
+        // Cloud image
         &::before {
             @include clouds.cloud-1();
             bottom: 100%;
@@ -77,6 +80,7 @@ body.dark {
 
         }
 
+        // Cloud image
         &::after {
 
             @include clouds.cloud-1(
@@ -91,10 +95,8 @@ body.dark {
                 }
 
                 @include responsive.max(40rem) {
-                    opacity: 0.3;
+                    opacity: 0.2;
                     left: 0;
-
-                    
                 }
 
                 @include responsive.max(25rem) {
@@ -108,7 +110,6 @@ body.dark {
 
     &__job-title {
         font-size: var(--font-size-3);
-        z-index: 99;
         position: relative;
 
         @include responsive.max(70rem) {
@@ -119,6 +120,7 @@ body.dark {
             font-size: var(--font-size-1);
         }
 
+        // Cloud image
         &::before {
             @include clouds.cloud-3();
             top: 100%;
@@ -129,6 +131,7 @@ body.dark {
             }
         }
 
+        // Cloud image
         &::after {
             @include clouds.cloud-2();
             top: 0;

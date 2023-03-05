@@ -62,6 +62,7 @@ body.dark {
         position: relative;
     }
 
+    // Cloud image
     &::after {
         @include clouds.cloud-1(
             $width: 350px,
