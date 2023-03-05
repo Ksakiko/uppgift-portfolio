@@ -2,8 +2,6 @@ const toggleThemeApp = () => {
 
     const themeToggleButton = document.querySelector('.theme-toggle-button')
 
-    // add remove
-
     const toggleTheme = () => {
         
         document.body.classList.toggle('dark')

@@ -68,6 +68,7 @@ body.dark {
 
     }
 
+    // Cloud image
     &::after {
         @include clouds.cloud-2(
             $height: 350px,

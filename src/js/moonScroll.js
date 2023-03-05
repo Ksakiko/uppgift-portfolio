@@ -2,7 +2,7 @@ const moonScroll = () => {
 
     const body = document.querySelector('body');
 
-    const addAnimation = () => {
+    const animationOnScroll = () => {
 
         if (body.classList.contains('dark') && window.scrollY < 1000) {
             body.style.setProperty(
@@ -12,7 +12,7 @@ const moonScroll = () => {
         }
     }
 
-    window.addEventListener('scroll', addAnimation, false)
+    window.addEventListener('scroll', animationOnScroll, false)
 
 }
 

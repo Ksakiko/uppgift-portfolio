@@ -22,7 +22,6 @@ body {
         } 
 
     } 
-
 }
 
 .container {
@@ -32,7 +31,6 @@ body {
     .full-moon {
         display: none;
     } 
-
 }
 
 .hero,
@@ -44,10 +42,8 @@ body {
 
     &__inner {
         grid-column: inner;
-        
     }
 }
-
 
 .footer {
     height: var(--footer-height);
